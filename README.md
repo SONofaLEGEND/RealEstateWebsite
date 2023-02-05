@@ -49,5 +49,5 @@ A full-stack website based on Angular front end framework to emulate a real esta
 
 I have provided a video demo of the current state of the website (v1.0):
 <a href="https://www.youtube.com/watch?v=QsAULr7Sw2M">
-  <img src="https://img.youtube.com/vi/QsAULr7Sw2M/2.jpg" alt="Video Thumbnail">
+  <img src="https://img.youtube.com/vi/QsAULr7Sw2M/0.jpg" alt="Video Thumbnail">
 </a>
