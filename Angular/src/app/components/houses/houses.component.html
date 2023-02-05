@@ -1,0 +1,111 @@
+<ng-container *ngIf="loading">
+    <app-loading></app-loading>
+  </ng-container>
+  <ng-container *ngIf="!loading">
+    <div class="houses-page">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#"><img src="../../../assets/images/navlogo1.png" alt="Bootstrap" width="150" height="150"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" routerLink="/index">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" routerLink="/neighborhoods">Neighbourhoods</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" routerLink="/predict">Valuation</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Contact Us</a>
+                  </li>
+
+                  
+                </ul>
+                
+              </div>
+            </div>
+          </nav>
+          <div class="scroll-snap">
+            <header>
+              <div class="header-content">
+                  <h1>FIND YOUR DREAM HAVEN</h1>
+                  <h4>Search over 1,000+ properties listed on our site.</h4>
+
+                  <div class="filter-bar">
+                    <form action="" [formGroup]="houseForm" (ngSubmit)="filterhouse()">
+                        <div class="input-group">
+                        <label for="area">Location</label>
+                        <input type="text" id="area" name="area" formControlName = "area" placeholder="Enter a location">
+                        </div>
+                        <div class="input-group">
+                        <label for="bhk">BHK</label>
+                        <select id="bhk" name="bhk" formControlName = "bhk" >
+                            <option *ngFor="let bhk of bhks" [value]="bhk.value">
+                              {{bhk.label}}
+                            </option>
+                          </select>
+                        </div>
+                        <button type="submit" class = "search">Search</button>
+                    </form>
+                  </div>
+                  
+                  
+              
+              </div>
+              
+            </header>
+            <section class="blogposts">
+                <div class="blog">
+
+                  <div class="blog-container">
+                    <div class="blog-box" *ngFor="let property of properties">
+                      <div class="blog-img">
+                        <img [src]="property.image" [alt]="property.area">
+                      </div>
+                      <div class="blog-text">
+                        
+                        <a  class = "blog-title">{{property.area}}</a>
+                        <h3>SQFT: {{property.sqft}}</h3>
+                        <h3>BHK: {{property.bhk}}</h3>
+                        <h3>BATHROOMS: {{property.bathroom}}</h3>
+                        <a routerLink="/predict" class = "detail">View Details</a>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <a href="#" class = "bshow-all">SHOW ALL</a>
+
+                </div>
+            </section>
+                <section class="work">
+                    <div class="work-box">
+                      <h2>WORK WITH US</h2>
+                      <p>Our team, strives to take the guesswork out of selling or buying a property. The many important details involved in the process can seem daunting — our goal is to make it a seamless and enjoyable experience.</p>
+                      <a routerLink="/contact" class = 'ctnct'>CONTACT US</a>
+                    </div>
+                  </section>
+                  <footer>
+                    <div class="footer-content">
+                      <h3>THE MADRAS REALTORS</h3>
+                      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam, quo aliquam exercitationem consequatur impedit, placeat cum accusamus repellat sed.</p>
+                      <ul class="socials">
+                        <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                        <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                        <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                        <li><a href="#"><ion-icon name="mail-outline"></ion-icon></a></li>
+                      </ul>
+                    </div>
+                    <div class="footer-bottom">
+                      <p>Copyright &copy;2023 theMadrasRealtors. designed by <span>Cap'n Cook</span></p>
+                    </div>
+                  </footer>
+          </div>
+    </div>
+  </ng-container>  

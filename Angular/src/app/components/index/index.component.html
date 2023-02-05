@@ -1,0 +1,363 @@
+<ng-container *ngIf="loading">
+    <app-loading></app-loading>
+  </ng-container>
+  <ng-container *ngIf="!loading">
+  
+  
+  
+<div class="index-page">
+    
+    <div class="bg-video">
+        <div class="video-container">
+            <video autoplay loop muted>
+                
+                <source src="../../../assets/images/video.webm">
+            </video>
+            <div class="vid"></div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="../../../assets/images/navlogo.png" alt="Bootstrap" width="150" height="150"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" routerLink="/houses">Properties</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/neighborhoods">Neighbourhoods</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/predict">Valuation</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/contact">Contact Us</a>
+              </li>
+              <div *ngIf="!isLogin">
+                <li class="nav-item">
+                  <a  routerLink="/login"><button class = "login-btn">LOGIN</button></a>
+                </li>
+              </div>
+              <div *ngIf="isLogin">
+                <li class="nav-item">
+                  <a (click)="logOut()"><button class = "login-btn">LOGOUT</button></a>
+                </li>
+              </div>
+              
+
+            </ul>
+            
+          </div>
+        </div>
+      </nav>
+
+    <div class="scroll-snap">
+      <header>
+        <div class="header-content">
+            <h3>FROM THE ENCHANTING CAPITAL OF TAMILNADU</h3>
+            <h1>THE MADRAS REALTORS</h1>
+            <h4>Unparalleled Service and Expert Advice at Every Step of the Real Estate Transaction</h4>
+            <a routerLink="/houses" class="ctn">VIEW PROERTIES</a>
+            
+        
+        </div>
+        <ion-icon class = "scdown" name="chevron-down-outline"></ion-icon>
+      </header>
+      <section class = 'events'>
+        <div class="row">
+            <div class="col">
+              <h4>WHO ARE WE?</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos enim voluptates minus quidem illo obcaecati a explicabo asperiores, dolorum quam neque accusantium quibusdam sapiente reprehenderit minima cumque vero. Dignissimos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam dolores ab asperiores obcaecati eaque quae dignissimos sint earum, nulla non nostrum reiciendis! Delectus inventore facilis dolore aperiam natus maxime ullam!Lorem. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum dolor magni dolorum? Quae dolor officiis vero molestiae? Optio dolorum nulla eligendi sit debitis perspiciatis eum pariatur architecto, cupiditate, sapiente molestiae.</p>
+              <a routerLink="/contact" class = "contact-us">CONTACT US</a>
+              
+            </div>
+            <div class="col">
+                <img src="../../../assets/images/brba.jpg" alt="">
+            </div>
+
+
+        </div>
+
+    </section>
+
+    <section class="testimonials">
+      <div class="title"><h1>TESTIMONIALS</h1>
+      </div>
+      
+      <div id="slider">
+        <input type="radio" name="slider" id="slide1" checked>
+        <input type="radio" name="slider" id="slide2">
+        <input type="radio" name="slider" id="slide3">
+        <input type="radio" name="slider" id="slide4">
+        <div id="slides">
+           <div id="overflow">
+              <div class="inner">
+                 <div class="slide slide_1">
+                    <div class="slide-content">
+                       <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quis ipsa sequi aliquam culpa! Dolore id nobis dolorem a molestiae, voluptatibus dolores, expedita nihil similique, earum aperiam! Excepturi, possimus esse?</h2>
+                       <p>Phil Dunphy</p>
+                    </div>
+                 </div>
+                 <div class="slide slide_2">
+                    <div class="slide-content">
+                       <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quis ipsa sequi aliquam culpa! Dolore id nobis dolorem a molestiae, voluptatibus dolores, expedita nihil similique, earum aperiam! Excepturi, possimus esse?</h2>
+                       <p>Thomas Shelby</p>
+                    </div>
+                 </div>
+                 <div class="slide slide_3">
+                    <div class="slide-content">
+                       <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quis ipsa sequi aliquam culpa! Dolore id nobis dolorem a molestiae, voluptatibus dolores, expedita nihil similique, earum aperiam! Excepturi, possimus esse?</h2>
+                       <p>Jimmy McNulty</p>
+                    </div>
+                 </div>
+                 <div class="slide slide_4">
+                    <div class="slide-content">
+                       <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quis ipsa sequi aliquam culpa! Dolore id nobis dolorem a molestiae, voluptatibus dolores, expedita nihil similique, earum aperiam! Excepturi, possimus esse?</h2>
+                       <p>John Reese</p>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+        <div id="controls">
+           <label for="slide1"></label>
+           <label for="slide2"></label>
+           <label for="slide3"></label>
+           <label for="slide4"></label>
+        </div>
+        <div id="bullets">
+           <label for="slide1"></label>
+           <label for="slide2"></label>
+           <label for="slide3"></label>
+           <label for="slide4"></label>
+        </div>
+     </div>
+    </section>
+    <section class="properties">
+      <div class="prop-title">
+        <h1>Featured Properties</h1>
+      </div>
+      <div class="container">
+        <div class="p-row">
+          <div class="image">
+            <img src="../../../assets/images/house1.jpg" alt="">
+            <div class="details">
+              <h2>ADYAR</h2>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores ad illum voluptas nihil, molestias quam similique nobis. </p>
+              <div class="more"><a href="#" class = "read-more">View Now</a></div>
+            </div>
+          </div>
+          <div class="image">
+            <img src="../../../assets/images/house2.jpeg" alt="">
+            <div class="details">
+              <h2>CHROMPET</h2>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores ad illum voluptas nihil, molestias quam similique nobis. </p>
+              <div class="more"><a href="#" class = "read-more">View Now</a></div>
+            </div>
+          </div>
+          <div class="image">
+            <img src="../../../assets/images/house3.webp" alt="">
+            <div class="details">
+              <h2>T NAGAR</h2>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores ad illum voluptas nihil, molestias quam similique nobis. </p>
+              <div class="more"><a href="#" class = "read-more">View Now</a></div>
+            </div>
+          </div>
+          <div class="image">
+            <img src="../../../assets/images/house4.jpg" alt="">
+            <div class="details">
+              <h2>SANTHOME</h2>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores ad illum voluptas nihil, molestias quam similique nobis. </p>
+              <div class="more"><a href="#" class = "read-more">View Now</a></div>
+            </div>
+          </div>
+        </div>
+        <a routerLink="/properties" class = "show-all">SHOW ALL</a>
+      </div>
+      
+    </section>
+    <section class="neighborhood">
+      <div class="ne-title">
+        <h1>Neighbourhoods</h1>
+      </div>
+      <div class="ncontainer">
+        <div class="n-row">
+          
+          <div class="nimage">
+            <img src="../../../assets/images/adyar.webp" alt="">
+            <div class="ndetails">
+              <h2>ADYAR</h2>
+              
+              <div class="nmore"><a href="#" class = "nread-more">Explore</a></div>
+            </div>
+          </div>
+          <div class="nimage">
+            <img src="../../../assets/images/ambattur.jpeg" alt="">
+            <div class="ndetails">
+              <h2>AMBATTUR</h2>
+              <div class="nmore"><a href="#" class = "nread-more">Explore</a></div>
+            </div>
+          </div>
+          <div class="nimage">
+            <img src="../../../assets/images/chrompet.jpeg" alt="">
+            <div class="ndetails">
+              <h2>CHROMPET</h2>
+              <div class="nmore"><a href="#" class = "nread-more">Explore</a></div>
+            </div>
+          </div>
+          <div class="nimage">
+            <img src="../../../assets/images/chepauk.webp" alt="">
+            <div class="ndetails">
+              <h2>CHEPAUK</h2>
+              <div class="nmore"><a href="#" class = "nread-more">Explore</a></div>
+            </div>
+          </div>
+          <div class="nimage">
+            <img src="../../../assets/images/egmore.jpeg" alt="">
+            <div class="ndetails">
+              <h2>EGMORE</h2>
+              
+              <div class="nmore"><a href="#" class = "nread-more">Explore</a></div>
+            </div>
+          </div>
+          <div class="nimage">
+            <img src="../../../assets/images/guindy.webp" alt="">
+            <div class="ndetails">
+              <h2>GUINDY</h2>
+              <div class="nmore"><a href="#" class = "nread-more">Explore</a></div>
+            </div>
+          </div>
+          <div class="nimage">
+            <img src="../../../assets/images/perambur.jpg" alt="">
+            <div class="ndetails">
+              <h2>PERAMBUR</h2>
+              <div class="nmore"><a href="#" class = "nread-more">Explore</a></div>
+            </div>
+          </div>
+          <div class="nimage">
+            <img src="../../../assets/images/poonamalle.webp" alt="">
+            <div class="ndetails">
+              <h2>PORUR</h2>
+              <div class="nmore"><a href="#" class = "nread-more">Explore</a></div>
+            </div>
+          </div>
+          <div class="nimage">
+            <img src="../../../assets/images/sholinganallur.jpeg" alt="">
+            <div class="ndetails">
+              <h2>SHOLINGANALLUR</h2>
+              <div class="nmore"><a href="#" class = "nread-more">Explore</a></div>
+            </div>
+          </div>
+          <div class="nimage">
+            <img src="../../../assets/images/t nagar.webp" alt="">
+            <div class="ndetails">
+              <h2>T NAGAR</h2>
+              <div class="nmore"><a href="#" class = "nread-more">Explore</a></div>
+            </div>
+          </div>
+          <div class="nimage">
+            <img src="../../../assets/images/thousandlights.jpg" alt="">
+            <div class="ndetails">
+              <h2>THOUSAND LIGHTS</h2>
+              <div class="nmore"><a href="#" class = "nread-more">Explore</a></div>
+            </div>
+          </div>
+          <div class="nimage">
+            <img src="../../../assets/images/velachery.jpg" alt="">
+            <div class="ndetails">
+              <h2>VELACHERY</h2>
+              <div class="nmore"><a href="#" class = "nread-more">Explore</a></div>
+            </div>
+          </div>
+        </div>
+        <a routerLink="/neighborhoods" class = "nshow-all">SHOW ALL</a>
+      </div>
+    </section>
+    <section class="blogposts">
+    <div class="blog">
+      <div class="blog-heading">
+        <h2>VISIT OUT BLOG</h2>
+      </div>
+      <div class="blog-container">
+        <div class="blog-box">
+          <div class="blog-img">
+            <img src="../../../assets/images/re.webp" alt="">
+          </div>
+          <div class="blog-text">
+            <span>26 Jan 2023 / Chennai</span>
+            <a routerLink="/predict" class = "blog-title">Want to Predict the cost of Houses using AI?</a>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non voluptas debitis nostrum ipsum repellat distinctio molestias vitae vero, quos natus ad. Enim dolorem hic ex commodi quo eaque corporis soluta!</p>
+            <a routerLink="/predict">Read More</a>
+          </div>
+        </div>
+        <div class="blog-box">
+          <div class="blog-img">
+            <img src="../../../assets/images/re1.jpg" alt="">
+          </div>
+          <div class="blog-text">
+            <span>13 Jan 2023 / Chennai</span>
+            <a href="#" class = "blog-title">Chennai registers record house sales in 2022</a>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non voluptas debitis nostrum ipsum repellat distinctio molestias vitae vero, quos natus ad. Enim dolorem hic ex commodi quo eaque corporis soluta!</p>
+            <a href="">Read More</a>
+          </div>
+        </div>
+        <div class="blog-box">
+          <div class="blog-img">
+            <img src="../../../assets/images/re2.jpg" alt="">
+          </div>
+          <div class="blog-text">
+            <span>5 Jan 2023 / Chennai</span>
+            <a href="#" class = "blog-title">Complete guide for buying Real estate in 2023</a>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non voluptas debitis nostrum ipsum repellat distinctio molestias vitae vero, quos natus ad. Enim dolorem hic ex commodi quo eaque corporis soluta!</p>
+            <a href="">Read More</a>
+          </div>
+        </div>
+      </div>
+      <a href="#" class = "bshow-all">SHOW ALL</a>
+    </div>
+    </section>
+    <section class="prediction">
+      <div class="mrow">
+        <div class="mcol">
+          <img src="../../../assets/images/rep.jpeg" alt="">
+        </div>
+        <div class="mcol">
+
+            <h4>TRY OUR AI BASED PRICE PREDICTION SYSTEM</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos enim voluptates minus quidem illo obcaecati a explicabo asperiores, dolorum quam neque accusantium quibusdam sapiente reprehenderit minima cumque vero. Dignissimos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam dolores ab asperiores obcaecati eaque quae dignissimos sint earum, nulla non nostrum reiciendis! Delectus inventore facilis dolore aperiam natus maxime ullam!Lorem. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum dolor magni dolorum? Quae dolor officiis vero molestiae? Optio dolorum nulla eligendi sit debitis perspiciatis eum pariatur architecto, cupiditate, sapiente molestiae.</p>
+          <a routerLink="/predict" class = "mcontact-us">TRY NOW</a>
+        </div>
+
+
+    </div>
+    </section>
+    <section class="work">
+      <div class="work-box">
+        <h2>WORK WITH US</h2>
+        <p>Our team, strives to take the guesswork out of selling or buying a property. The many important details involved in the process can seem daunting — our goal is to make it a seamless and enjoyable experience.</p>
+        <a routerLink="/contact" class = 'ctnct'>CONTACT US</a>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-content">
+        <h3>THE MADRAS REALTORS</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam, quo aliquam exercitationem consequatur impedit, placeat cum accusamus repellat sed.</p>
+        <ul class="socials">
+          <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+          <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+          <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+          <li><a href="#"><ion-icon name="mail-outline"></ion-icon></a></li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <p>Copyright &copy;2023 theMadrasRealtors. designed by <span>Cap'n Cook</span></p>
+      </div>
+    </footer>
+    </div>
+</div>
+  </ng-container>

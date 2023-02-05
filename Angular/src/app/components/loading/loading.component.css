@@ -1,0 +1,18 @@
+.box {
+    width: 600px;
+    height: 600px;
+
+    text-align: center;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .anim {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }

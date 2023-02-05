@@ -1,0 +1,183 @@
+<ng-container *ngIf="loading">
+    <app-loading></app-loading>
+  </ng-container>
+  <ng-container *ngIf="!loading">
+  
+  <div class="neighborhoods-page">
+      <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="../../../assets/images/navlogo1.png" alt="Bootstrap" width="150" height="150"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                  
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" routerLink="/index">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" routerLink="/houses">Properties</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/predict">Valuation</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contact Us</a>
+                </li>
+                <div *ngIf="!isLogin">
+                  <li class="nav-item">
+                    <a  routerLink="/login"><button class = "login-btn">LOGIN</button></a>
+                  </li>
+                </div>
+                
+              </ul>
+              
+            </div>
+          </div>
+        </nav>
+        <div class="scroll-snap">
+          <header>
+            <div class="header-content">
+                <h1>WE ARE ALL OVER CHENNAI</h1>
+                <h4>We'll help you find your dream home in an extravagant neighborhood</h4>
+                
+            
+            </div>
+            
+          </header>
+          <section class="neighborhood">
+            <div class="ncontainer">
+              <div class="n-row">
+                
+                <div class="nimage">
+                  <img src="../../../assets/images/adyar.webp" alt="">
+                  <div class="ndetails">
+                    <h2>ADYAR</h2>
+                    
+                    <div class="nmore"><a href="#" class = "nread-more">Explore</a></div>
+                  </div>
+                </div>
+                <div class="nimage">
+                  <img src="../../../assets/images/ambattur.jpeg" alt="">
+                  <div class="ndetails">
+                    <h2>AMBATTUR</h2>
+                    <div class="nmore"><a href="#" class = "nread-more">Explore</a></div>
+                  </div>
+                </div>
+                <div class="nimage">
+                  <img src="../../../assets/images/chrompet.jpeg" alt="">
+                  <div class="ndetails">
+                    <h2>CHROMPET</h2>
+                    <div class="nmore"><a href="#" class = "nread-more">Explore</a></div>
+                  </div>
+                </div>
+                <div class="nimage">
+                  <img src="../../../assets/images/chepauk.webp" alt="">
+                  <div class="ndetails">
+                    <h2>CHEPAUK</h2>
+                    <div class="nmore"><a href="#" class = "nread-more">Explore</a></div>
+                  </div>
+                </div>
+                <div class="nimage">
+                  <img src="../../../assets/images/egmore.jpeg" alt="">
+                  <div class="ndetails">
+                    <h2>EGMORE</h2>
+                    
+                    <div class="nmore"><a href="#" class = "nread-more">Explore</a></div>
+                  </div>
+                </div>
+                <div class="nimage">
+                  <img src="../../../assets/images/guindy.webp" alt="">
+                  <div class="ndetails">
+                    <h2>GUINDY</h2>
+                    <div class="nmore"><a href="#" class = "nread-more">Explore</a></div>
+                  </div>
+                </div>
+                <div class="nimage">
+                  <img src="../../../assets/images/perambur.jpg" alt="">
+                  <div class="ndetails">
+                    <h2>PERAMBUR</h2>
+                    <div class="nmore"><a href="#" class = "nread-more">Explore</a></div>
+                  </div>
+                </div>
+                <div class="nimage">
+                  <img src="../../../assets/images/poonamalle.webp" alt="">
+                  <div class="ndetails">
+                    <h2>PORUR</h2>
+                    <div class="nmore"><a href="#" class = "nread-more">Explore</a></div>
+                  </div>
+                </div>
+                <div class="nimage">
+                  <img src="../../../assets/images/sholinganallur.jpeg" alt="">
+                  <div class="ndetails">
+                    <h2>SHOLINGANALLUR</h2>
+                    <div class="nmore"><a href="#" class = "nread-more">Explore</a></div>
+                  </div>
+                </div>
+                <div class="nimage">
+                  <img src="../../../assets/images/t nagar.webp" alt="">
+                  <div class="ndetails">
+                    <h2>T NAGAR</h2>
+                    <div class="nmore"><a href="#" class = "nread-more">Explore</a></div>
+                  </div>
+                </div>
+                <div class="nimage">
+                  <img src="../../../assets/images/thousandlights.jpg" alt="">
+                  <div class="ndetails">
+                    <h2>THOUSAND LIGHTS</h2>
+                    <div class="nmore"><a href="#" class = "nread-more">Explore</a></div>
+                  </div>
+                </div>
+                <div class="nimage">
+                  <img src="../../../assets/images/velachery.jpg" alt="">
+                  <div class="ndetails">
+                    <h2>AND MORE..</h2>
+                    <div class="nmore"><a href="#" class = "nread-more">Explore</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="map">
+            <div class="mrow">
+              <div class="mcol">
+                <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1IW627mexgevtBr1CUH89BpvhaOf0CHg&ehbc=2E312F" width="940" height="600"></iframe>
+              </div>
+              <div class="mcol">
+      
+                  <h4>OUR AREAS OF SERVICE</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos enim voluptates minus quidem illo obcaecati a explicabo asperiores, dolorum quam neque accusantium quibusdam sapiente reprehenderit minima cumque vero. Dignissimos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam dolores ab asperiores obcaecati eaque quae dignissimos sint earum, nulla non nostrum reiciendis! Delectus inventore facilis dolore aperiam natus maxime ullam!Lorem. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum dolor magni dolorum? Quae dolor officiis vero molestiae? Optio dolorum nulla eligendi sit debitis perspiciatis eum pariatur architecto, cupiditate, sapiente molestiae.</p>
+                <a routerLink="/predict" class = "mcontact-us">FIND PROPERTIES</a>
+              </div>
+      
+      
+          </div>
+          </section>
+          <section class="work">
+            <div class="work-box">
+              <h2>WORK WITH US</h2>
+              <p>Our team, strives to take the guesswork out of selling or buying a property. The many important details involved in the process can seem daunting — our goal is to make it a seamless and enjoyable experience.</p>
+              <a routerLink="/contact" class = 'ctnct'>CONTACT US</a>
+            </div>
+          </section>
+          <footer>
+            <div class="footer-content">
+              <h3>THE MADRAS REALTORS</h3>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam, quo aliquam exercitationem consequatur impedit, placeat cum accusamus repellat sed.</p>
+              <ul class="socials">
+                <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                <li><a href="#"><ion-icon name="mail-outline"></ion-icon></a></li>
+              </ul>
+            </div>
+            <div class="footer-bottom">
+              <p>Copyright &copy;2023 theMadrasRealtors. designed by <span>Cap'n Cook</span></p>
+            </div>
+          </footer>
+        </div>
+  </div>
+  
+  </ng-container>
