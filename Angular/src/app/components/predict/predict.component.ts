@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-predict',
@@ -10,7 +11,7 @@ import { FormControl, FormBuilder, FormGroup, Validators } from '@angular/forms'
 export class PredictComponent {
   p = new FormControl('');
   submitted = false;
-  constructor(private _http:HttpClient, private formBuilder: FormBuilder) { }
+  constructor(private _http:HttpClient, private formBuilder: FormBuilder, private titleService:Title) { }
   predictForm!: FormGroup;
   loading = false;
   transitionBetweenPages() {
@@ -18,6 +19,7 @@ export class PredictComponent {
     setTimeout(() => {
       this.loading = false;
     }, 3000);
+    this.titleService.setTitle('PREDICT HOUSE PRICE');
   }
   areas = [
     { value: 'Chrompet', label: 'Chrompet'},

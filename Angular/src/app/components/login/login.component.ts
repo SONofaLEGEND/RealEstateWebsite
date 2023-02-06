@@ -5,6 +5,8 @@ import Swal from 'sweetalert2';
 import { Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
 import { AuthService } from 'src/app/services/auth.service';
+import { Title, Meta } from '@angular/platform-browser';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -13,7 +15,7 @@ import { AuthService } from 'src/app/services/auth.service';
 export class LoginComponent implements OnInit {
   token!: string;
 
-  constructor (private _http:HttpClient, private authService: AuthService, private ngZone: NgZone, private router:Router, private cookieService: CookieService) {}
+  constructor (private _http:HttpClient, private authService: AuthService, private ngZone: NgZone, private router:Router,private titleService:Title, private cookieService: CookieService) {}
   t: string | null | undefined;
   submitted = false;
   errorMessage:string|null = null;
@@ -24,6 +26,7 @@ export class LoginComponent implements OnInit {
     setTimeout(() => {
       this.loading = false;
     }, 3000);
+    this.titleService.setTitle('LOGIN');
   }
   ngOnInit(): void {
     this.loginForm = new FormGroup({
