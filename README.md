@@ -38,7 +38,7 @@ A full-stack website based on Angular front end framework to emulate a real esta
 - Sweet Effect Library
 - Angular Cookie Service
 - Pickle, JSON Library
-- FASTApi
+- Python Flask Server
 - Express, NodeJS
 - MongoDB
 
